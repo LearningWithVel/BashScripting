@@ -1,0 +1,3 @@
+2 this is lenghty sendent.
+1 Print first word in this line.
+3 Now 3rd word.

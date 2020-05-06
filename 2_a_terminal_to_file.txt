@@ -1,0 +1,2 @@
+wow 
+we have opyion to write file directlly from terminal

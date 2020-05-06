@@ -1,0 +1,72 @@
+  502  cd ~/Desktop//tmp/
+  503  mkdir awk
+  504  vi name.txt
+  505  awk '{print $2, $1}' name.txt 
+  506  vi name.txt
+  507  awk '{print $2, $1}' name.txt 
+  508  awk '{print $2, $1}'' name.txt 
+  509  vi ~/.profile
+  510  awk 'print $2, $1}'' name.txt 
+q
+  511  awk 'print $2, $1}' name.txt
+  512  awk '{print $2, $1}' name.txt
+  513  cd awk/
+  514  awk '{print $3}' name.txt
+  515  awk '{print $3}' dukeofyork.txt 
+  516  mv ../name.txt ./
+  517  awk '{print $0}' dukeofyork.txt 
+  518  awk '{print $2 $1}' name.txt
+  519  awk '{print $2 "," $1}' name.txt
+  520  awk '{print $2 ", " $1}' name.txt
+  521  awk '{print}' name.txt
+  522  awk '{print}' dukeofyork.txt 
+  523  awk '{print NF, $0}' dukeofyork.txt 
+  524  awk '{print NF, $0}' dukeofyork.txt  #Nuber of feilds
+  525  awk '{print NF, $0}' dukeofyork.txt  #NF - Nuber of feilds
+  526  awk '/up/{print NF, $0}' dukeofyork.txt 
+  527  awk '/up/{print NF, $0}' dukeofyork.txt # Print string has up 
+  528  awk '/up/{print NF, $0}' dukeofyork.txt # Print string has up . /up/ is an action
+  529  awk '/up/{print NF, $0}' dukeofyork.txt # Print string has up . /up/ is an action and this is regx
+  530  awk 'NF==6{print NF, $0}' dukeofyork.txt # Print string has up . Print line has 6 words
+  531  awk 'NF==6' dukeofyork.txt # Print string has up . Print line has 6 words
+  532  awk '/up/{print "UP:" , NF, $0 /down/{print "DOWN:" , NF, $0}' dukeofyork.txt # Print string has up . Print line has 6 words
+  533  awk '/up/{print "UP:" , NF, $0} /down/{print "DOWN:" , NF, $0}' dukeofyork.txt # Print string up: at beging that has the word up. and down : infrond of down word.
+  534  vi swap
+  535  awk -f swap name.txt 
+  536  awk -f swap name.txt # Excute awk program called swap on file name.txt
+  537  awk -F , '{print $2}' # -F Feild Seprator and print 2 word after , . 
+  538  vi feildSeprator.txt
+  539  awk -F , '{print $2}' feildSeprator.txt # -F Feild Seprator and print 2 word after , . 
+  540  vi tabseprated.txt
+  541  awk -F t '{print $2}'  tabseprated.txt # Feild seprate with tab(t)
+  542  awk -v hi=HELLO '{print $1, hi}'  tabseprated.txt # pass hi s HELLO to print and print first word with HELLO
+  543  cat tabseprated.txt 
+  544  awk '{print NF, $0}' dukeofyork.txt name.txt # MUltiple input file.
+  545  awk '{print NF, $0}' # input from terminal
+  546  awk '{print NF, $0}' # input from terminal. Ctrl + d to end 
+  547  awk '{print NF, $0}' < name.txt # input from file 
+  548  uptime 
+  549  uptime | awk '{print NF, $0}' # Read input from another command using piping.
+  550  awk '{print NF, $0}' dukeofyork.txt > awk.out # Redirect output to file.
+  551  cat awk.out 
+  552* awk '{print NF, $0}' dukeofyork.txt | sort -n # Output to another command.
+  553  awk '{print $2]
+One two three
+  554  awk '{print $2}'
+  555  awk -F , '{print $2}'
+  556  awk -F ABC  '{print $2}'
+  557  awk -F '[,!]' '{print $2}'
+  558  awk -F '[,!]' '{print $2}' # , or ! as feild seprator. 
+  559  awk '{FS=","; print $2}'
+  560  awk '{FS=","; print $2}' #; is the program ending used. So here first statement feild seprator and then print 2 feild from 2nd line
+  561  awk 'BEGIN{FS=","} { print $2}' #BEGIN set the first and the call and then print 2 feild from 2nd line
+  562  awk 'BEGIN{FS=","} { print $2}' #BEGIN set the first and the call and then print 2 feild from 2nd line
+  563  vi onebigline.txt
+  564  awk 'BEGIN{RS="!";FS=","} { print $2}' onebigline.txt #BEGIN set the first and the call and then print 2 feild from 2nd line. FS -feild seprator. RS record seprator.
+  565  awk 'BEGIN{OFS=", "; ORS="!"} {print @2 @1}' name.txt # OFS - Output feild seprator. ORS - Output record seprator.
+  566  awk 'BEGIN{OFS=", ";ORS="!"} {print @2, @1}' name.txt # OFS - Output feild seprator. ORS - Output record seprator.
+  567  awk 'BEGIN{OFS=", ";ORS="\n"} {print @2, @1}' name.txt # OFS - Output feild seprator. ORS - Output record seprator.
+  568  awk 'BEGIN{OFS=", ";ORS="   "} {print @2, @1}' name.txt # OFS - Output feild seprator. ORS - Output record seprator.
+  569  awk 'BEGIN{OFS=",";ORS=" "} {print @2, @1}' name.txt # OFS - Output feild seprator. ORS - Output record seprator.
+  570  awk 'BEGIN{OFS=",";ORS=" "} {print $2, $1}' name.txt # OFS - Output feild seprator. ORS - Output record seprator.
+  571  awk 'BEGIN{OFS=",";ORS="\n"} {print $2, $1}' name.txt # OFS - Output feild seprator. ORS - Output record seprator.

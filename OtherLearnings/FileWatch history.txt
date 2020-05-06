@@ -1,0 +1,5 @@
+  502  mkdir TEST
+  503  fswatch TEST
+  504  fswatch -l 10 TEST
+  505  fswatch --timestamp TEST
+
